@@ -1,4 +1,4 @@
-project('bnetcpp', 'cpp', version : '0.1')
+project('supercombat', 'cpp', version : '0.1')
 
 override = []
 
@@ -16,14 +16,14 @@ openssl = dependency('openssl')
 
 encode64 = dependency('cppbase64')
 
-bnetcpp_deps = [network, openssl, encode64]
+server_deps = [network, openssl, encode64]
 
 if host_machine.system() == 'linux'
-  bnetcpp_deps += dependency('threads')
+  server_deps += dependency('threads')
 endif
 
-bnetcpp_src = [
-  'src/client.cpp'
+server_src = [
+  'src/main.cpp'
 ]
 
 type = get_option('default_library')
