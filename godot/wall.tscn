@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://0qcbxaee6675"]
+
+[ext_resource type="Script" uid="uid://buvkinc2j656n" path="res://fill_shape.gd" id="1_xxgf6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ig7tw"]
+resource_local_to_scene = true
+
+[node name="Wall" type="StaticBody2D"]
+
+[node name="Collider" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ig7tw")
+script = ExtResource("1_xxgf6")
